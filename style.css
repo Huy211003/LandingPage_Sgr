@@ -625,6 +625,61 @@ img {
     border-radius: 5px 5px;
 }
 
+/* responsive home section */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .register-form-wrapper {
+        padding: 20px;
+    }
+
+    .register-input {
+        position: relative;
+    }
+
+    .register-input::placeholder {
+        position: relative;
+        left: 20px;
+    }
+
+    select.register-input {
+        background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/input-select.png) no-repeat 5px 15px !important;
+    }
+
+    input.register-submit {
+        font-size: 12px;
+    }
+
+    p.register-form-terms {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .register-form-wrapper {
+        padding: 20px;
+    }
+
+    .register-input {
+        position: relative;
+    }
+
+    .register-input::placeholder {
+        position: relative;
+        left: 20px;
+    }
+
+    select.register-input {
+        background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/input-select.png) no-repeat 5px 15px !important;
+    }
+
+    input.register-submit {
+        font-size: 12px;
+    }
+
+    p.register-form-terms {
+        text-align: center;
+    }
+}
+
 .register-form-wrapper h3 {
     margin-bottom: 5px;
     font-size: 22px;
@@ -650,11 +705,6 @@ p.register_success_box {
 
 input.name-input {
     background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/input-user.png) no-repeat 12px 15px;
-}
-
-.name-input {
-    margin-right: 1em;
-    /* Sử dụng giá trị tương đối như em */
 }
 
 input.register-input,
@@ -1247,12 +1297,20 @@ p.testim-name {
     white-space: normal;
 }
 
+/* responsive testimonials section */
 @media (min-width: 768px) and (max-width: 1200px) {
     .card-header h5 .btn-link p span {
         display: block;
         /* Hiển thị span trên một dòng mới khi màn hình nhỏ lại */
         white-space: normal;
         /* Cho phép span xuống dòng tự động */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header h5 .btn-link p span {
+        display: block;
+        white-space: normal;
     }
 }
 
@@ -1318,7 +1376,7 @@ p.testim-name {
 
 .fadeIn {
     animation-name: fadeIn;
-    animation-duration: 4s;
+    animation-duration: 10s;
 }
 
 /* team section */
