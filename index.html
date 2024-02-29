@@ -801,75 +801,77 @@
             ]
         });
     </script>
+    <!-- Thanh header -->
+    <script>
+        $(document).ready(function () {
+            // Lấy phần tử header
+            var header = $(".header");
+            // Lấy vị trí cuộn của phần home-section
+            var homeSectionPosition = $("#home").offset().top;
+            // Tính toán vị trí cần đạt để hiển thị header với lớp opaque (ở khoảng 2/3 của home section)
+            var opaqueTriggerPosition = homeSectionPosition + ($("#home").outerHeight() * 0.6);
 
+            // Xử lý sự kiện cuộn trang
+            $(window).scroll(function () {
+                // Lấy vị trí cuộn hiện tại
+                var scrollPosition = $(window).scrollTop();
+                // Kiểm tra nếu vị trí cuộn đã vượt qua điểm kích hoạt
+                if (scrollPosition >= opaqueTriggerPosition) {
+                    // Thêm lớp 'opaque' vào header
+                    header.find('.navbar').addClass("opaque");
+                } else {
+                    // Loại bỏ lớp 'opaque' khỏi header
+                    header.find('.navbar').removeClass("opaque");
+                }
+            });
+        });
+    </script>
+
+    <!-- Màu của các thẻ li-header khi scroll đến -->
+    <script>
+        $(document).ready(function () {
+            var clicked = false; // Biến để kiểm tra xem có sự kiện click đã xảy ra không
+
+            // Xử lý sự kiện cuộn trang
+            $(window).scroll(function () {
+                if (!clicked) { // Chỉ thực hiện nếu không có sự kiện click trước đó
+                    // Lấy vị trí cuộn hiện tại
+                    var scrollPosition = $(window).scrollTop() + $(".navbar").outerHeight(); // Cộng thêm độ cao của thanh header
+                    // Lặp qua mỗi thẻ <a> trong header
+                    $(".navbar-nav a").each(function () {
+                        // Lấy href của thẻ <a> và kiểm tra nếu có phần tử với id tương ứng
+                        var sectionId = $(this).attr("href");
+                        var sectionOffset = $(sectionId).offset().top;
+                        var sectionHeight = $(sectionId).outerHeight();
+                        // Tính toán vị trí dưới cùng của phần tử được xem là hiển thị
+                        var sectionBottom = sectionOffset + sectionHeight;
+                        // Kiểm tra xem vị trí cuộn đã đạt đến phần tử này chưa
+                        if (scrollPosition >= sectionOffset && scrollPosition < sectionBottom) {
+                            // Loại bỏ lớp 'red-text' khỏi tất cả các thẻ <a>
+                            $(".navbar-nav a").removeClass("red-text");
+                            // Thêm lớp 'red-text' vào thẻ <a> hiện tại
+                            $(this).addClass("red-text");
+                        }
+                    });
+                } else {
+                    clicked = false; // Reset biến clicked khi đã thực hiện xong sự kiện click
+                }
+            });
+
+            // Xử lý sự kiện click cho các thẻ <a> trong header
+            $(".navbar-nav a").click(function () {
+                clicked = true; // Đặt biến clicked thành true khi có sự kiện click
+                // Ẩn thanh navbar bằng cách thêm lớp 'collapsed' và loại bỏ lớp 'show'
+                $(".navbar-toggler").addClass("collapsed");
+                $("#navbarCollapse").removeClass("show");
+                // Loại bỏ lớp 'red-text' khỏi tất cả các thẻ <a>
+                $(".navbar-nav a").removeClass("red-text");
+                // Thêm lớp 'red-text' vào thẻ <a> được click
+                $(this).addClass("red-text");
+            });
+        });
+    </script>
 
 </body>
 
 </html>
-<!-- Thanh header -->
-<script>
-    $(document).ready(function () {
-        // Lấy phần tử header
-        var header = $(".header");
-        // Lấy vị trí cuộn của phần home-section
-        var homeSectionPosition = $("#home").offset().top;
-        // Tính toán vị trí cần đạt để hiển thị header với lớp opaque (ở khoảng 2/3 của home section)
-        var opaqueTriggerPosition = homeSectionPosition + ($("#home").outerHeight() * 0.6);
-
-        // Xử lý sự kiện cuộn trang
-        $(window).scroll(function () {
-            // Lấy vị trí cuộn hiện tại
-            var scrollPosition = $(window).scrollTop();
-            // Kiểm tra nếu vị trí cuộn đã vượt qua điểm kích hoạt
-            if (scrollPosition >= opaqueTriggerPosition) {
-                // Thêm lớp 'opaque' vào header
-                header.find('.navbar').addClass("opaque");
-            } else {
-                // Loại bỏ lớp 'opaque' khỏi header
-                header.find('.navbar').removeClass("opaque");
-            }
-        });
-    });
-</script>
-
-<!-- Màu của các thẻ li-header khi scroll đến -->
-<script>
-    $(document).ready(function () {
-        var clicked = false; // Biến để kiểm tra xem có sự kiện click đã xảy ra không
-
-        // Xử lý sự kiện cuộn trang
-        $(window).scroll(function () {
-            if (!clicked) { // Chỉ thực hiện nếu không có sự kiện click trước đó
-                // Lấy vị trí cuộn hiện tại
-                var scrollPosition = $(window).scrollTop() + $(".navbar").outerHeight(); // Cộng thêm độ cao của thanh header
-                // Lặp qua mỗi thẻ <a> trong header
-                $(".navbar-nav a").each(function () {
-                    // Lấy href của thẻ <a> và kiểm tra nếu có phần tử với id tương ứng
-                    var sectionId = $(this).attr("href");
-                    var sectionOffset = $(sectionId).offset().top;
-                    var sectionHeight = $(sectionId).outerHeight();
-                    // Tính toán vị trí dưới cùng của phần tử được xem là hiển thị
-                    var sectionBottom = sectionOffset + sectionHeight;
-                    // Kiểm tra xem vị trí cuộn đã đạt đến phần tử này chưa
-                    if (scrollPosition >= sectionOffset && scrollPosition < sectionBottom) {
-                        // Loại bỏ lớp 'red-text' khỏi tất cả các thẻ <a>
-                        $(".navbar-nav a").removeClass("red-text");
-                        // Thêm lớp 'red-text' vào thẻ <a> hiện tại
-                        $(this).addClass("red-text");
-                    }
-                });
-            } else {
-                clicked = false; // Reset biến clicked khi đã thực hiện xong sự kiện click
-            }
-        });
-
-        // Xử lý sự kiện click cho các thẻ <a> trong header
-        $(".navbar-nav a").click(function () {
-            clicked = true; // Đặt biến clicked thành true khi có sự kiện click
-            // Loại bỏ lớp 'red-text' khỏi tất cả các thẻ <a>
-            $(".navbar-nav a").removeClass("red-text");
-            // Thêm lớp 'red-text' vào thẻ <a> được click
-            $(this).addClass("red-text");
-        });
-    });
-</script>
