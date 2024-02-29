@@ -6,39 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaunchPage</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animation.css">
 </head>
 
 <body>
     <div class="main">
         <!-- header -->
         <header class="header">
-            <div class="container">
-                <a href="#" class="navbar-brand">LaunchPage</a>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#portfolio">Work</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact" class="discover-btn">Get Started</a></li>
-                    </ul>
+            <nav class="navbar navbar-expand-lg navbar-default navbar-fixed-top opaque">
+                <div class="container">
+                    <a class="navbar-brand" href="#">LaunchPage</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#portfolio">Work</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li class="discover-link"><a href="#contact" class="discover-btn">Get Started</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </nav>
         </header>
         <!-- home section -->
         <div class="home-section" id="home">
@@ -58,7 +71,7 @@
                         </div>
                     </div>
                     <div class="col-md-5 offset-md-1 margin-top-20">
-                        <div class="register-form-wrapper wow bounceIn" data-wow-delay="0.5s"
+                        <div class="register-form-wrapper wow bounceIn element" data-wow-delay="0.5s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: bounceIn;">
                             <h3>Get Your Free 14-Day Trial</h3>
                             <p>Velis demo enim quia tempor magnet.</p>
@@ -148,7 +161,7 @@
         <div class="section-white">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 wow slideInLeft" data-wow-delay="0.25s"
+                    <div class="col-md-6 wow slideInLeft element" data-wow-delay="0.25s"
                         style="visibility: visible; animation-delay: 0.25s; animation-name: slideInLeft;">
                         <div class="margin-right-15">
                             <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about001.jpg"
@@ -215,7 +228,7 @@
                                 <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about2.jpg"
                                     class="width-100 image-shadow top-margins-images" alt="pic">
                             </div>
-                            <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                 aria-labelledby="v-pills-profile-tab">
                                 <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about5.jpg"
                                     class="width-100 image-shadow top-margins-images" alt="pic">
@@ -224,7 +237,7 @@
                                 aria-labelledby="v-pills-messages-tab">
                                 <img src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about1.jpg"
                                     class="width-100 image-shadow top-margins-images" alt="pic">
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -374,7 +387,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row wow fadeIn" data-wow-delay="0.25s"
+                <div class="row wow fadeIn element" data-wow-delay="0.25s"
                     style="visibility: visible; animation-delay: 0.25s; animation-name: fadeIn;">
                     <div class="col-md-4 col-sm-12 p-0 m-0">
                         <figure class="gallery-insta">
@@ -515,7 +528,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="feature-box light-green wow fadeIn" data-wow-delay="0.25s"
+                        <div class="feature-box light-green wow fadeIn element" data-wow-delay="0.25s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                             <i class="fas fa-tools"></i>
                             <div class="feature-box-text">
@@ -537,7 +550,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="feature-box orange wow fadeIn" data-wow-delay="0.75s"
+                        <div class="feature-box orange wow fadeIn element" data-wow-delay="0.75s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                             <i class="far fa-bell"></i>
                             <div class="feature-box-text">
@@ -550,7 +563,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="feature-box dark-blue wow fadeIn" data-wow-delay="1s"
+                        <div class="feature-box dark-blue wow fadeIn element" data-wow-delay="1s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                             <i class="fas fa-gift"></i>
                             <div class="feature-box-text">
@@ -561,7 +574,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="feature-box light-red wow fadeIn" data-wow-delay="1.25s"
+                        <div class="feature-box light-red wow fadeIn element" data-wow-delay="1.25s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                             <i class="fas fa-piggy-bank"></i>
                             <div class="feature-box-text">
@@ -572,7 +585,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="feature-box dark-green wow fadeIn" data-wow-delay="1.5s"
+                        <div class="feature-box dark-green wow fadeIn element" data-wow-delay="1.5s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
                             <i class="far fa-comments"></i>
                             <div class="feature-box-text">
@@ -594,7 +607,7 @@
                         <p>Quis autem velis ets reprehender net etid quiste voluptate. Utise wisi enim minim veniam,
                             quis et stationes nets.</p>
                     </div>
-                    <div class="col-md-4 col-sm-6 wow bounceIn" data-wow-delay="0.25s"
+                    <div class="col-md-4 col-sm-6 wow bounceIn element" data-wow-delay="0.25s"
                         style="visibility: visible; animation-delay: 0.25s; animation-name: bounceIn;">
                         <div class="price-box-white">
                             <ul class="pricing-list">
@@ -607,7 +620,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 wow bounceIn" data-wow-delay="0.75s"
+                    <div class="col-md-4 col-sm-6 wow bounceIn element" data-wow-delay="0.75s"
                         style="visibility: visible; animation-delay: 0.75s; animation-name: bounceIn;">
                         <div class="price-box-grey">
                             <ul class="pricing-list">
@@ -677,7 +690,7 @@
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-8 text-center margin-top-10">
-                        <div class="contact-form-wrapper wow bounceIn" data-wow-delay="0.5s"
+                        <div class="contact-form-wrapper wow bounceIn element" data-wow-delay="0.5s"
                             style="visibility: visible; animation-delay: 0.5s; animation-name: bounceIn;">
                             <div>
                                 <p class="contact_success_box" style="display:none;">We received your message and you
@@ -738,6 +751,127 @@
         <!--end footer -->
     </div>
 
+
+    <script>
+        $(document).ready(function () {
+            // Chỉ hiển thị card-body của collapseOne khi trang được tải
+            $('#collapseOne').collapse('show');
+
+            // Toggle card-body visibility when card-header is clicked
+            $('.card-header').click(function () {
+                var $collapse = $(this).next('.collapse');
+                var isOpen = $collapse.hasClass('show');
+
+                // Ẩn tất cả các collapse trừ collapse của card được click
+                $('.collapse').collapse('hide');
+
+                // Nếu collapse đã được mở, không cần mở lại, chỉ cần đóng
+                if (!isOpen) {
+                    $collapse.collapse('show');
+                }
+            });
+        });
+    </script>
+
+    <!-- Scroll animation -->
+    <script>
+        ScrollReveal().reveal('.bounceIn', {
+            delay: 200,
+            duration: 1000,
+            keyframes: [
+                { percent: 0, opacity: 0, transform: 'scale(.3)' },
+                { percent: 50, opacity: 1, transform: 'scale(1.05)' },
+                { percent: 70, transform: 'scale(.9)' },
+                { percent: 100, transform: 'scale(1)' }
+            ]
+        });
+
+        ScrollReveal().reveal('.slideInLeft', {
+            delay: 200,
+            duration: 1000,
+            keyframes: [
+                { percent: 0, opacity: 0, transform: 'translateX(-2000px)' },
+                { percent: 100, transform: 'translateX(0)' }
+            ]
+        });
+
+        ScrollReveal().reveal('.fadeIn', {
+            delay: 200,
+            duration: 1000,
+            keyframes: [
+                { percent: 0, opacity: 0 },
+                { percent: 100, opacity: 1 }
+            ]
+        });
+
+    </script>
+
 </body>
 
 </html>
+<!-- Thanh header -->
+<script>
+    $(document).ready(function () {
+        // Lấy phần tử header
+        var header = $(".header");
+        // Lấy vị trí cuộn của phần home-section
+        var homeSectionPosition = $("#home").offset().top;
+        // Tính toán vị trí cần đạt để hiển thị header với lớp opaque (ở khoảng 2/3 của home section)
+        var opaqueTriggerPosition = homeSectionPosition + ($("#home").outerHeight() * 0.6);
+
+        // Xử lý sự kiện cuộn trang
+        $(window).scroll(function () {
+            // Lấy vị trí cuộn hiện tại
+            var scrollPosition = $(window).scrollTop();
+            // Kiểm tra nếu vị trí cuộn đã vượt qua điểm kích hoạt
+            if (scrollPosition >= opaqueTriggerPosition) {
+                // Thêm lớp 'opaque' vào header
+                header.find('.navbar').addClass("opaque");
+            } else {
+                // Loại bỏ lớp 'opaque' khỏi header
+                header.find('.navbar').removeClass("opaque");
+            }
+        });
+    });
+</script>
+<!-- Màu của các thẻ li-header khi scroll đến -->
+<script>
+    $(document).ready(function () {
+        var clicked = false; // Biến để kiểm tra xem có sự kiện click đã xảy ra không
+
+        // Xử lý sự kiện cuộn trang
+        $(window).scroll(function () {
+            if (!clicked) { // Chỉ thực hiện nếu không có sự kiện click trước đó
+                // Lấy vị trí cuộn hiện tại
+                var scrollPosition = $(window).scrollTop() + $(".navbar").outerHeight(); // Cộng thêm độ cao của thanh header
+                // Lặp qua mỗi thẻ <a> trong header
+                $(".navbar-nav a").each(function () {
+                    // Lấy href của thẻ <a> và kiểm tra nếu có phần tử với id tương ứng
+                    var sectionId = $(this).attr("href");
+                    var sectionOffset = $(sectionId).offset().top;
+                    var sectionHeight = $(sectionId).outerHeight();
+                    // Tính toán vị trí dưới cùng của phần tử được xem là hiển thị
+                    var sectionBottom = sectionOffset + sectionHeight;
+                    // Kiểm tra xem vị trí cuộn đã đạt đến phần tử này chưa
+                    if (scrollPosition >= sectionOffset && scrollPosition < sectionBottom) {
+                        // Loại bỏ lớp 'red-text' khỏi tất cả các thẻ <a>
+                        $(".navbar-nav a").removeClass("red-text");
+                        // Thêm lớp 'red-text' vào thẻ <a> hiện tại
+                        $(this).addClass("red-text");
+                    }
+                });
+            } else {
+                clicked = false; // Reset biến clicked khi đã thực hiện xong sự kiện click
+            }
+        });
+
+        // Xử lý sự kiện click cho các thẻ <a> trong header
+        $(".navbar-nav a").click(function () {
+            clicked = true; // Đặt biến clicked thành true khi có sự kiện click
+            // Loại bỏ lớp 'red-text' khỏi tất cả các thẻ <a>
+            $(".navbar-nav a").removeClass("red-text");
+            // Thêm lớp 'red-text' vào thẻ <a> được click
+            $(this).addClass("red-text");
+        });
+    });
+</script>
