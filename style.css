@@ -645,7 +645,7 @@ img {
     }
 
     input.register-submit {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
     p.register-form-terms {
@@ -672,7 +672,7 @@ img {
     }
 
     input.register-submit {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
     p.register-form-terms {
