@@ -777,34 +777,31 @@
     <script>
         ScrollReveal().reveal('.bounceIn', {
             delay: 200,
-            duration: 1000,
             keyframes: [
-                { percent: 0, opacity: 0, transform: 'scale(.3)' },
-                { percent: 50, opacity: 1, transform: 'scale(1.05)' },
-                { percent: 70, transform: 'scale(.9)' },
-                { percent: 100, transform: 'scale(1)' }
+                { opacity: 0, transform: 'scale(.3)' },
+                { opacity: 1, transform: 'scale(1.05)' },
+                { transform: 'scale(.9)' },
+                { transform: 'scale(1)' }
             ]
         });
 
         ScrollReveal().reveal('.slideInLeft', {
-            delay: 200,
-            duration: 1000,
+            delay: 500,
             keyframes: [
-                { percent: 0, opacity: 0, transform: 'translateX(-2000px)' },
-                { percent: 100, transform: 'translateX(0)' }
+                { opacity: 0, transform: 'translateX(-2000px)' },
+                { transform: 'translateX(0)' }
             ]
         });
 
         ScrollReveal().reveal('.fadeIn', {
             delay: 200,
-            duration: 1000,
             keyframes: [
-                { percent: 0, opacity: 0 },
-                { percent: 100, opacity: 1 }
+                { opacity: 0 },
+                { opacity: 1 }
             ]
         });
-
     </script>
+
 
 </body>
 
@@ -834,6 +831,7 @@
         });
     });
 </script>
+
 <!-- Màu của các thẻ li-header khi scroll đến -->
 <script>
     $(document).ready(function () {
